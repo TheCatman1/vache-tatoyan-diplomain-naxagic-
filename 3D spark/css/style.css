@@ -1,0 +1,247 @@
+/* Общие стили */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #1e1e2f;
+    color: #f4f4f9;
+}
+
+/* Хедер */
+header {
+    background: rgba(30, 30, 30, 0.9); /* Тёмно-серый с прозрачностью */
+    padding: 20px 0; /* Отступы сверху и снизу */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Лёгкая тень */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Размытие для современного эффекта */
+    background-color: rgba(30, 30, 30, 0.9); /* Цвет фона */
+}
+
+header h1 {
+    color: #f4f4f9;
+    font-size: 2rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.1rem;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent; /* Подчёркивание при наведении */
+    padding-bottom: 2px;
+}
+
+nav a:hover {
+    color: #ffcc00; /* Нежный акцент */
+    border-bottom: 2px solid #ffcc00;
+}
+
+/* Основной контент */
+.section {
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: auto;
+    text-align: left; /* Выравниваем текст по левому краю */
+}
+
+/* Заголовок секции */
+.section h2 {
+    color: #ffcc00;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Текст и списки внутри секции */
+.section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #f4f4f9;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+    font-size: 1.1rem;
+    color: #f4f4f9;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Заголовки третьего уровня */
+h3 {
+    color: #ffcc00;
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+/* Стили для карточек */
+.card {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px; /* Добавляем отступ сверху */
+    align-items: stretch; /* Выравниваем все карточки по высоте */
+}
+
+.card-item {
+    background: #2c2c3d; /* Фон карточки */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    width: 250px; /* Уменьшенный размер карточки */
+    height: 320px; /* Увеличенная высота для выравнивания текста */
+    padding: 20px;
+    text-align: center;
+    overflow: visible; /* Убираем обрезание контента */
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 20px; /* Дополнительный отступ между карточками и остальным контентом */
+    display: flex;
+    flex-direction: column; /* Элементы располагаются вертикально */
+    align-items: center; /* Центровка содержимого по горизонтали */
+    justify-content: space-between; /* Равномерное распределение пространства */
+    text-align: center; /* Центровка текста */
+    text-decoration: none; /* Убираем подчёркивание для всех ссылок */
+}
+
+.card-item:hover {
+    transform: translateY(-10%); /* Изображение выходит за пределы карточки */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Усиливаем тень */
+}
+
+/* Стили для изображений */
+.card-item img {
+    width: 50%; /* Уменьшаем размер изображения */
+    position: relative;
+    top: 0; /* Изображение изначально в центре карточки */
+    margin: 0 auto 15px; /* Центрируем изображение */
+    display: block;
+    transition: transform 0.3s, top 0.3s; /* Плавный переход для движения */
+    z-index: 1; /* Изображение выше текста */
+}
+
+.card-item:hover img {
+    top: -15%; /* Изображение выходит на 30% вверх за пределы карточки */
+    transform: scale(1.1); /* Лёгкое увеличение изображения */
+}
+
+.card-item p {
+    margin: 0; /* Убираем отступы сверху и снизу */
+    color: #b0b0b0; /* Цвет текста описания */
+    font-size: 0.9rem; /* Размер текста описания */
+    line-height: 1.4rem; /* Высота строки */
+}
+
+/* Заголовок и текст внутри карточек */
+.card-item h3 {
+    margin: 20px 0 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f4f4f9;
+    text-align: center;
+    line-height: 1.5rem; /* Высота строки */
+    height: 3rem; /* Задаёт фиксированную высоту для двух строк текста */
+    overflow: hidden; /* Скрывает текст, выходящий за пределы */
+}
+
+/* Убираем подчеркивание у ссылок */
+.card-item a {
+    text-decoration: none; /* Убираем подчёркивание */
+    color: inherit; /* Наследуем цвет текста */
+}
+
+button {
+    background: #0073e6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #005bb5;
+}
+
+/* Футер */
+footer {
+    background: #20232a;
+    color: #f4f4f9;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 3px solid #6a11cb;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+footer a {
+    color: #6a11cb;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffcc00;
+}
+
+/* Логотип */
+.logo {
+    font-size: 2.5rem; /* Размер текста */
+    font-weight: 600;
+    color: #f4f4f9;
+    display: inline-flex; /* Выравнивание текста и изображения */
+    align-items: center; /* Центровка по вертикали */
+    gap: 5px; /* Расстояние между текстом и изображением */
+    justify-content: center;
+}
+
+.logo-img {
+    height: 1em; /* Подгоняем высоту точно под размер текста */
+    width: auto; /* Сохраняем пропорции изображения */
+    vertical-align: middle; /* Центровка по вертикали с текстом */
+    transform: translateY(1px); /* Чуть-чуть сдвигаем вниз */
+}
+
+.logo span:last-child {
+    margin-left: 10px; /* Увеличиваем расстояние между "D" и "Spark" */
+}
+/* Заголовок секции с выравниванием по центру */
+.centered {
+    text-align: center;
+    font-size: 2rem;
+    color: #ffcc00;
+}
+
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
